@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
+import Converter from "./components/Converter"
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="row">
+        <Converter currencyA="USD" currencyB="BRL"></Converter>
+        <Converter currencyA="BRL" currencyB="USD"></Converter>
+      </div>
+      <div className="row">
+        <Converter currencyA="NZD" currencyB="BRL"></Converter>
+        <Converter currencyA="BRL" currencyB="NZD"></Converter>
+      </div>
+      <div className="row">
+        <Converter currencyA="AUD" currencyB="BRL"></Converter>
+        <Converter currencyA="BRL" currencyB="AUD"></Converter>
+      </div>
+      
     </div>
   );
 }
